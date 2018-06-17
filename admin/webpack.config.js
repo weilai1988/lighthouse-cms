@@ -6,12 +6,12 @@ const path = require('path');
 
 module.exports = {
   entry: {
-    app: ['./src/index.jsx'],
+    app: ['./src/client/index.jsx'],
   },
   output: {
     filename: '[name].bundle.js',
     chunkFilename: '[name].bundle.js',
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'public'),
   },
   module: {
     rules: [
@@ -57,7 +57,7 @@ module.exports = {
       chunkFilename: "[id].css"
     }),
     new HtmlWebPackPlugin({
-      template: './src/index.html',
+      template: './src/client/index.html',
       filename: './index.html',
     })
   ],
