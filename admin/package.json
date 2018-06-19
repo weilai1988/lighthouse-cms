@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start:client": "webpack-dev-server --open --mode development",
-    "build": "rm -rf ./public && webpack --mode=production && rm -rf ./server && babel ./src/server -d server",
+    "build": "rm -rf ./dist && webpack --mode=production && babel ./src/server -d ./dist/server",
     "start:all": "nodemon --exec babel-node ./src/server/index.js",
     "start": "clear && npm run start:all"
   },
